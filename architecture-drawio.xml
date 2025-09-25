@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" etag="abc123" version="22.1.16" type="device">
+  <diagram name="Full-Stack Architecture" id="architecture-diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Client Layer -->
+        <mxCell id="client-layer" value="Client Layer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1f5fe;strokeColor=#01579b;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="web-app" value="Web App&#xa;Angular" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="client-layer">
+          <mxGeometry x="10" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile-app" value="Mobile App&#xa;Ionic" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="client-layer">
+          <mxGeometry x="110" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Infrastructure Layer -->
+        <mxCell id="infra-layer" value="Infrastructure Layer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f3e5f5;strokeColor=#4a148c;" vertex="1" parent="1">
+          <mxGeometry x="300" y="50" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cdn" value="CDN&#xa;Static Assets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="infra-layer">
+          <mxGeometry x="10" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="load-balancer" value="Load Balancer&#xa;Traffic Distribution" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="infra-layer">
+          <mxGeometry x="110" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- API Gateway -->
+        <mxCell id="api-gateway" value="API Gateway&#xa;Authentication&#xa;Rate Limiting&#xa;Routing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Backend Services -->
+        <mxCell id="backend-layer" value="Backend Services (.NET Core)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e8f5e8;strokeColor=#1b5e20;" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="auth-service" value="Auth Service&#xa;JWT/OAuth2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="backend-layer">
+          <mxGeometry x="10" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="web-api" value="Web API&#xa;Controllers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="backend-layer">
+          <mxGeometry x="110" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="business-logic" value="Business Logic&#xa;Domain Services" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="backend-layer">
+          <mxGeometry x="210" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="data-access" value="Data Access&#xa;Repository Pattern&#xa;Entity Framework" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="backend-layer">
+          <mxGeometry x="10" y="120" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="validation" value="Validation&#xa;Middleware" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="backend-layer">
+          <mxGeometry x="110" y="120" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="logging" value="Logging&#xa;Serilog" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="backend-layer">
+          <mxGeometry x="210" y="120" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Database Layer -->
+        <mxCell id="database-layer" value="Database Layer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff3e0;strokeColor=#e65100;" vertex="1" parent="1">
+          <mxGeometry x="400" y="250" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="postgresql" value="PostgreSQL&#xa;Primary Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="database-layer">
+          <mxGeometry x="10" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" value="Redis&#xa;Cache &amp; Sessions" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="database-layer">
+          <mxGeometry x="110" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- External Services -->
+        <mxCell id="external-layer" value="External Services" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fce4ec;strokeColor=#880e4f;" vertex="1" parent="1">
+          <mxGeometry x="650" y="250" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="email-service" value="Email Service&#xa;SendGrid" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="external-layer">
+          <mxGeometry x="10" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-gateway" value="Payment&#xa;Stripe" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="external-layer">
+          <mxGeometry x="110" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- DevOps Layer -->
+        <mxCell id="devops-layer" value="DevOps &amp; CI/CD" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e0f2f1;strokeColor=#004d40;" vertex="1" parent="1">
+          <mxGeometry x="50" y="500" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="git" value="Git Repository&#xa;Source Control" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="devops-layer">
+          <mxGeometry x="10" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ci-cd" value="CI/CD Pipeline&#xa;Azure DevOps" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="devops-layer">
+          <mxGeometry x="110" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="docker" value="Docker&#xa;Containers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="devops-layer">
+          <mxGeometry x="210" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Environments -->
+        <mxCell id="env-layer" value="Environments" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff8e1;strokeColor=#f57f17;" vertex="1" parent="1">
+          <mxGeometry x="400" y="500" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dev-env" value="Development&#xa;Local" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="env-layer">
+          <mxGeometry x="10" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="staging-env" value="Staging&#xa;Testing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="env-layer">
+          <mxGeometry x="110" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="prod-env" value="Production&#xa;Live" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="env-layer">
+          <mxGeometry x="210" y="40" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Monitoring -->
+        <mxCell id="monitoring" value="Monitoring &amp; Observability&#xa;Application Insights&#xa;ELK Stack" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#33691e;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="500" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Connections -->
+        <mxCell id="conn1" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="web-app" target="cdn">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn2" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="load-balancer" target="api-gateway">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="api-gateway" target="auth-service">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn4" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="web-api" target="postgresql">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn5" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="data-access" target="postgresql">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn6" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="web-api" target="email-service">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="docker" target="dev-env">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn8" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="web-api" target="monitoring">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="200" as="sourcePoint" />
+            <mxPoint x="350" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Labels for connections -->
+        <mxCell id="label1" value="HTTP/HTTPS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="label2" value="API Calls" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="200" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="label3" value="Database Queries" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="350" y="350" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="label4" value="Deploy" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="350" y="550" width="50" height="20" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
