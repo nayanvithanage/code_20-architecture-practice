@@ -10,10 +10,10 @@ graph TD
     
     D[User: You] --> A
     
-    style A fill:#e1f5fe
-    style B fill:#e8f5e8
-    style C fill:#fff3e0
-    style D fill:#fce4ec
+    style A fill:#f8f9fa
+    style B fill:#e9ecef
+    style C fill:#dee2e6
+    style D fill:#adb5bd
 ```
 
 **Characteristics:**
@@ -43,14 +43,14 @@ graph TD
     
     H[External API<br/>Payment Gateway] --> C
     
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
-    style E fill:#fff3e0
-    style F fill:#fce4ec
-    style G fill:#fce4ec
-    style H fill:#f1f8e9
+    style A fill:#f8f9fa
+    style B fill:#e9ecef
+    style C fill:#dee2e6
+    style D fill:#ced4da
+    style E fill:#adb5bd
+    style F fill:#6c757d
+    style G fill:#495057
+    style H fill:#343a40
 ```
 
 **Characteristics:**
@@ -99,23 +99,23 @@ graph TD
     P[Customers<br/>100-1000 users] --> A
     Q[Admin Users<br/>5-10 people] --> A
     
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#f3e5f5
-    style D fill:#fff3e0
-    style E fill:#e8f5e8
-    style F fill:#e8f5e8
-    style G fill:#e8f5e8
-    style H fill:#e8f5e8
-    style I fill:#fff3e0
-    style J fill:#fff3e0
-    style K fill:#fff3e0
-    style L fill:#fff3e0
-    style M fill:#fff3e0
-    style N fill:#f1f8e9
-    style O fill:#f1f8e9
-    style P fill:#fce4ec
-    style Q fill:#fce4ec
+    style A fill:#f8f9fa
+    style B fill:#e9ecef
+    style C fill:#e9ecef
+    style D fill:#dee2e6
+    style E fill:#ced4da
+    style F fill:#ced4da
+    style G fill:#ced4da
+    style H fill:#ced4da
+    style I fill:#adb5bd
+    style J fill:#adb5bd
+    style K fill:#adb5bd
+    style L fill:#adb5bd
+    style M fill:#adb5bd
+    style N fill:#6c757d
+    style O fill:#6c757d
+    style P fill:#495057
+    style Q fill:#495057
 ```
 
 **Characteristics:**
@@ -176,28 +176,28 @@ graph TD
     U[Enterprise Users<br/>1000-10000] --> A
     V[Admin Users<br/>50-100 people] --> A
     
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#f3e5f5
-    style D fill:#fff3e0
-    style E fill:#e8f5e8
-    style F fill:#e8f5e8
-    style G fill:#e8f5e8
-    style H fill:#e8f5e8
-    style I fill:#e8f5e8
-    style J fill:#fff3e0
-    style K fill:#fff3e0
-    style L fill:#fff3e0
-    style M fill:#fff3e0
-    style N fill:#fff3e0
-    style O fill:#fff3e0
-    style P fill:#f1f8e9
-    style Q fill:#f1f8e9
-    style R fill:#f1f8e9
-    style S fill:#f1f8e9
-    style T fill:#f1f8e9
-    style U fill:#fce4ec
-    style V fill:#fce4ec
+    style A fill:#f8f9fa
+    style B fill:#e9ecef
+    style C fill:#e9ecef
+    style D fill:#dee2e6
+    style E fill:#ced4da
+    style F fill:#ced4da
+    style G fill:#ced4da
+    style H fill:#ced4da
+    style I fill:#ced4da
+    style J fill:#adb5bd
+    style K fill:#adb5bd
+    style L fill:#adb5bd
+    style M fill:#adb5bd
+    style N fill:#adb5bd
+    style O fill:#adb5bd
+    style P fill:#6c757d
+    style Q fill:#6c757d
+    style R fill:#6c757d
+    style S fill:#6c757d
+    style T fill:#6c757d
+    style U fill:#495057
+    style V fill:#495057
 ```
 
 **Characteristics:**
@@ -263,30 +263,30 @@ graph TD
     W[Bank Staff<br/>1000+ employees] --> A
     X[Regulators<br/>Compliance team] --> A
     
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#f3e5f5
-    style D fill:#fff3e0
-    style E fill:#e8f5e8
-    style F fill:#e8f5e8
-    style G fill:#e8f5e8
-    style H fill:#e8f5e8
-    style I fill:#e8f5e8
-    style J fill:#fff3e0
-    style K fill:#fff3e0
-    style L fill:#fff3e0
-    style M fill:#fff3e0
-    style N fill:#fff3e0
-    style O fill:#fff3e0
-    style P fill:#f1f8e9
-    style Q fill:#f1f8e9
-    style R fill:#f1f8e9
-    style S fill:#f1f8e9
-    style T fill:#f1f8e9
-    style U fill:#f1f8e9
-    style V fill:#fce4ec
-    style W fill:#fce4ec
-    style X fill:#fce4ec
+    style A fill:#f8f9fa
+    style B fill:#e9ecef
+    style C fill:#e9ecef
+    style D fill:#dee2e6
+    style E fill:#ced4da
+    style F fill:#ced4da
+    style G fill:#ced4da
+    style H fill:#ced4da
+    style I fill:#ced4da
+    style J fill:#adb5bd
+    style K fill:#adb5bd
+    style L fill:#adb5bd
+    style M fill:#adb5bd
+    style N fill:#adb5bd
+    style O fill:#adb5bd
+    style P fill:#6c757d
+    style Q fill:#6c757d
+    style R fill:#6c757d
+    style S fill:#6c757d
+    style T fill:#6c757d
+    style U fill:#6c757d
+    style V fill:#495057
+    style W fill:#495057
+    style X fill:#495057
 ```
 
 **Characteristics:**
