@@ -8,7 +8,7 @@ graph TD
     B --> C[.NET Core API]
     C --> D[Business Logic]
     D --> E[Data Access Layer]
-    E --> F[(PostgreSQL Database)]
+    E --> F[(PostgreSQL Instance)]
     
     C --> G[(Redis Cache)]
     C --> H[External Services]
@@ -37,7 +37,7 @@ graph TB
     end
     
     subgraph "Database"
-        PG[(PostgreSQL)]
+        PG[(PostgreSQL Instance)]
         REDIS[(Redis)]
     end
     

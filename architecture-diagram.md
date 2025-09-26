@@ -39,7 +39,7 @@ graph TB
 
     %% Database Layer
     subgraph "Database Layer"
-        PG[(PostgreSQL<br/>Primary Database<br/>ACID Compliance)]
+        PG[(PostgreSQL<br/>Database Instance<br/>ACID Compliance)]
         REDIS[(Redis<br/>Caching<br/>Session Store)]
         BLOB[Blob Storage<br/>Files/Images<br/>Azure Blob/AWS S3]
     end

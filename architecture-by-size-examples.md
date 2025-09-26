@@ -145,13 +145,13 @@ graph TD
     D --> H[Marketing Service<br/>Campaign Management]
     D --> I[Analytics Service<br/>Reporting & Insights]
     
-    E --> J[(Identity Database<br/>PostgreSQL)]
-    F --> K[(Customer Database<br/>PostgreSQL)]
-    G --> L[(Sales Database<br/>PostgreSQL)]
-    H --> M[(Marketing Database<br/>PostgreSQL)]
-    I --> N[(Analytics Database<br/>PostgreSQL)]
+    E --> J[(Identity Database<br/>PostgreSQL Instance)]
+    F --> K[(Customer Database<br/>PostgreSQL Instance)]
+    G --> L[(Sales Database<br/>PostgreSQL Instance)]
+    H --> M[(Marketing Database<br/>PostgreSQL Instance)]
+    I --> N[(Analytics Database<br/>PostgreSQL Instance)]
     
-    O[Redis Cluster<br/>Distributed Cache] --> E
+    O[Redis Cache<br/>Session & Data] --> E
     O --> F
     O --> G
     O --> H
@@ -227,13 +227,13 @@ graph TD
     D --> H[Risk Service<br/>Fraud Detection]
     D --> I[Reporting Service<br/>Compliance & Analytics]
     
-    E --> J[(Identity Database<br/>PostgreSQL Cluster)]
-    F --> K[(Account Database<br/>PostgreSQL Cluster)]
-    G --> L[(Transaction Database<br/>PostgreSQL Cluster)]
-    H --> M[(Risk Database<br/>PostgreSQL Cluster)]
-    I --> N[(Analytics Database<br/>PostgreSQL Cluster)]
+    E --> J[(Identity Database<br/>PostgreSQL HA Setup)]
+    F --> K[(Account Database<br/>PostgreSQL HA Setup)]
+    G --> L[(Transaction Database<br/>PostgreSQL HA Setup)]
+    H --> M[(Risk Database<br/>PostgreSQL HA Setup)]
+    I --> N[(Analytics Database<br/>PostgreSQL HA Setup)]
     
-    O[Redis Cluster<br/>Global Cache] --> E
+    O[Redis Cache<br/>Session & Data] --> E
     O --> F
     O --> G
     O --> H
@@ -308,8 +308,8 @@ graph TD
 | **Micro** | 1-10 | Simple | 1 | SQLite | None | Basic | Local |
 | **Small** | 10-100 | Moderate | 1-2 | PostgreSQL | Basic | Basic | Single Server |
 | **Medium** | 100-1K | Complex | 3-5 | Multiple | Redis | Advanced | Cloud |
-| **Large** | 1K-10K | Very Complex | 5-10 | Clusters | Distributed | Full | Multi-Region |
-| **Enterprise** | 10K+ | Highly Complex | 10+ | Distributed | Global | Complete | Global |
+| **Large** | 1K-10K | Very Complex | 5-10 | Multiple Instances | Distributed | Full | Multi-Region |
+| **Enterprise** | 10K+ | Highly Complex | 10+ | HA Setup | Global | Complete | Global |
 
 ---
 
@@ -317,17 +317,17 @@ graph TD
 
 ### **1. Database Evolution**
 - **Micro:** SQLite (file-based)
-- **Small:** PostgreSQL (single server)
-- **Medium:** Multiple PostgreSQL databases
-- **Large:** Database clusters
-- **Enterprise:** Distributed databases with replication
+- **Small:** PostgreSQL (single instance)
+- **Medium:** Multiple PostgreSQL instances
+- **Large:** Multiple PostgreSQL instances with read replicas
+- **Enterprise:** High Availability PostgreSQL setup with replication
 
 ### **2. Caching Evolution**
 - **Micro:** No caching
 - **Small:** Basic Redis
 - **Medium:** Redis with session management
-- **Large:** Distributed Redis cluster
-- **Enterprise:** Global caching with edge locations
+- **Large:** Redis with distributed caching
+- **Enterprise:** Redis with global caching and edge locations
 
 ### **3. Monitoring Evolution**
 - **Micro:** Basic logging

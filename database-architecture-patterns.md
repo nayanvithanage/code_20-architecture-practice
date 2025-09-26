@@ -21,7 +21,7 @@ graph TD
     B --> E[Order Service]
     B --> F[Payment Service]
     
-    C --> G[(Single PostgreSQL Database)]
+    C --> G[(Single PostgreSQL Instance)]
     D --> G
     E --> G
     F --> G
@@ -73,10 +73,10 @@ graph TD
     B --> E[Order Service]
     B --> F[Payment Service]
     
-    C --> G[(Auth Database<br/>PostgreSQL)]
-    D --> H[(Product Database<br/>PostgreSQL)]
-    E --> I[(Order Database<br/>PostgreSQL)]
-    F --> J[(Payment Database<br/>PostgreSQL)]
+    C --> G[(Auth Database<br/>PostgreSQL Instance)]
+    D --> H[(Product Database<br/>PostgreSQL Instance)]
+    E --> I[(Order Database<br/>PostgreSQL Instance)]
+    F --> J[(Payment Database<br/>PostgreSQL Instance)]
     
     K[Event Bus<br/>Data Synchronization] --> C
     K --> D
@@ -284,9 +284,9 @@ graph TD
     B --> D[Product Service]
     B --> E[Order Service]
     
-    C --> F[(User DB)]
-    D --> G[(Product DB)]
-    E --> H[(Order DB)]
+    C --> F[(User DB Instance)]
+    D --> G[(Product DB Instance)]
+    E --> H[(Order DB Instance)]
     
     style A fill:#495057
     style B fill:#495057
