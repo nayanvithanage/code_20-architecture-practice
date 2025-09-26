@@ -36,7 +36,7 @@ graph TD
     A[Angular Frontend<br/>Inventory Dashboard] --> B[Load Balancer<br/>Simple]
     B --> C[.NET Core API<br/>Multiple Controllers]
     C --> D[(PostgreSQL Database<br/>Shared)]
-    C --> E[Redis Cache<br/>Basic)]
+    C --> E[(Redis Cache<br/>Basic)]
     
     F[Business Owner] --> A
     G[Employees<br/>5-10 people] --> A
