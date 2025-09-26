@@ -18,3 +18,6 @@ for all the project do we need all of these components? no, but for learning pro
 
 if we create these architecture diagram f each application type we can get a clear idea what'sthe difference between them.
 then we can create projects on top of them.
+
+* understanding architecture and how these components connect each other first.
+    this gives an
