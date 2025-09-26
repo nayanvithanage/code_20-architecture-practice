@@ -43,14 +43,14 @@ graph TD
     
     H[External API<br/>Payment Gateway] --> C
     
-    style A fill:#f8f9fa
-    style B fill:#e9ecef
-    style C fill:#dee2e6
-    style D fill:#ced4da
-    style E fill:#adb5bd
-    style F fill:#6c757d
+    style A fill:#495057
+    style B fill:#495057
+    style C fill:#495057
+    style D fill:#495057
+    style E fill:#495057
+    style F fill:#495057
     style G fill:#495057
-    style H fill:#343a40
+    style H fill:#495057
 ```
 
 **Characteristics:**
